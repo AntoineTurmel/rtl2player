@@ -13,7 +13,7 @@ function playradio() {
 
     if (navigator.mozNotification) {
       document.body.classList.add("notification");
-      notification = navigator.mozNotification.createNotification("RTL2 Player", "Lecture en cours", "images/favicon.png");
+      notification = navigator.mozNotification.createNotification("RTL2 Player", "Lecture en cours", "http://geekshadow.github.com/rtl2player/images/favicon.png");
     }
     notification.show();
 }
