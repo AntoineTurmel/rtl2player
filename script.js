@@ -1,3 +1,20 @@
+// Retrieve Artist/Song
+
+$(document).ready(function() {
+    
+    $('#artist').load('http://nzf.turmel.info/data_rtl2/artist.txt');
+    $('#song').load('http://nzf.turmel.info/data_rtl2/song.txt');
+    
+    $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+setInterval(function() {
+
+    $('#artist').load('http://nzf.turmel.info/data_rtl2/artist.txt');
+    $('#song').load('http://nzf.turmel.info/data_rtl2/song.txt');
+}, 3000);
+    
+});
+
+
 // Player JS
 var playing = false
 var nectaaudio = new Audio("http://ais.rtl.fr:80/rtl2-1-48-128.ogg");

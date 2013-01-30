@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "name": "RTL2 Player",
   "description": "RTL2 Radio player",
   "launch_path": "/rtl2player",
@@ -14,6 +14,6 @@
     "32": "/rtl2player/images/icon-32.png",
     "16": "/rtl2player/images/icon-16.png"
   },
-  "orientation": "portrait",
+  "orientation": ["portrait","landscape"],
   "fullscreen": "false"
 }
