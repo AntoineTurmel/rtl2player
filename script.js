@@ -1,15 +1,33 @@
 // Retrieve Artist/Song
 
+var currentsong;
+
 $(document).ready(function() {
-    
+
     $('#artist').load('http://nzf.turmel.info/data_rtl2/artist.txt');
     $('#song').load('http://nzf.turmel.info/data_rtl2/song.txt');
     
     $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+
 setInterval(function() {
 
     $('#artist').load('http://nzf.turmel.info/data_rtl2/artist.txt');
     $('#song').load('http://nzf.turmel.info/data_rtl2/song.txt');
+
+  if ($('input[name=notifibox]').is(':checked') == true ) {
+    if (currentsong != $('#song').text()) {
+      //alert($('#song').text());
+      //alert(currentsong);
+      if (navigator.mozNotification) {
+        document.body.classList.add("notification");
+        notification = navigator.mozNotification.createNotification("RTL2 Player", $('#artist').text() + " - " + $('#song').text(), "http://geekshadow.github.com/rtl2player/images/favicon.png");
+        notification.show();
+        }
+     }
+  }
+
+    currentsong = $('#song').text();
+
 }, 3000);
     
 });
@@ -31,8 +49,8 @@ function playradio() {
     if (navigator.mozNotification) {
       document.body.classList.add("notification");
       notification = navigator.mozNotification.createNotification("RTL2 Player", "Lecture en cours", "http://geekshadow.github.com/rtl2player/images/favicon.png");
+      notification.show();
     }
-    notification.show();
 }
 
 function pauseradio() {
