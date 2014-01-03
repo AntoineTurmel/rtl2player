@@ -1,11 +1,11 @@
 {
-  "version": "0.3",
+  "version": "0.3.1",
   "name": "RTL2 Player",
   "description": "RTL2 Radio player",
   "launch_path": "/rtl2player",
   "developer": {
-    "name": "GeekShadow",
-    "url": "https://github.com/GeekShadow"
+    "name": "Antoine Turmel",
+    "url": "https://github.com/AntoineTurmel"
   },
   "icons": {
     "128": "/rtl2player/images/favicon.png",
