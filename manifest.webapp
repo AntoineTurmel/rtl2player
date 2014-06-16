@@ -15,5 +15,6 @@
     "16": "/rtl2player/images/icon-16.png"
   },
   "orientation": ["portrait","landscape"],
+  "chrome": { "navigation": true },
   "fullscreen": "false"
 }
